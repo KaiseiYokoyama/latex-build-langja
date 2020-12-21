@@ -16,6 +16,12 @@ if [ -n "$extra_tex_package" ]; then
   done
 fi
 
+echo "Install BXcoloremoji"
+git clone https://github.com/zr-tex8r/BXcoloremoji.git
+cp -r BXcoloremoji/emoji_images emoji_images
+cp BXcoloremoji/bxcoloremoji.sty bxcoloremoji.sty
+cp BXcoloremoji/bxcoloremoji-names.def bxcoloremoji-names.def
+
 if [ -n "$working_directory" ]; then
   cd "$working_directory"
 fi
